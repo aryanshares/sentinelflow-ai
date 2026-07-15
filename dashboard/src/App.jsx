@@ -1546,7 +1546,7 @@ export default function App() {
 
   // ── Render ─────────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-soc-bg bg-dot-grid text-slate-200 flex flex-col overflow-hidden font-sans">
+    <div className="h-screen bg-soc-bg bg-dot-grid text-slate-200 flex flex-col overflow-hidden font-sans">
 
       {/* ══ AI CHAT PANEL (overlay) ══════════════════════════════════════ */}
       <AiChatPanel
@@ -1762,8 +1762,9 @@ export default function App() {
                     />
                   </PieChart>
                 </ResponsiveContainer>
-                <div className="absolute flex flex-col items-center justify-center pointer-events-none mt-2">
-                  <span className="text-2xl font-bold font-mono text-slate-200">
+                {/* Center text for Pie Chart */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none pb-4">
+                  <span className="text-2xl font-bold font-mono text-slate-200 mt-6">
                     {metrics.total > 0 ? Math.round((metrics.anomalies / metrics.total) * 100) : 0}%
                   </span>
                   <span className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Threat Rate</span>
