@@ -1546,7 +1546,7 @@ export default function App() {
 
   // ── Render ─────────────────────────────────────────────────────────────
   return (
-    <div className="h-screen bg-soc-bg bg-dot-grid text-slate-200 flex flex-col overflow-hidden font-sans">
+    <div className="min-h-screen bg-soc-bg bg-dot-grid text-slate-200 flex flex-col font-sans">
 
       {/* ══ AI CHAT PANEL (overlay) ══════════════════════════════════════ */}
       <AiChatPanel
@@ -1705,10 +1705,10 @@ export default function App() {
       </div>
 
       {/* ══ MAIN CONTENT ═════════════════════════════════════════════════ */}
-      <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-0 overflow-hidden max-w-[1920px] w-full mx-auto">
+      <div className="flex-1 flex flex-col lg:flex-row gap-0 max-w-[1920px] w-full mx-auto">
 
         {/* Left column: Chart + Vector Distribution */}
-        <div className="lg:w-[58%] flex flex-col gap-0 border-r border-soc-border/50 overflow-y-auto">
+        <div className="lg:w-[58%] flex flex-col gap-0 border-r border-soc-border/50">
 
           {/* ── Visual Dashboards ───────────────────────────────────────── */}
           <div className="relative shrink-0 p-5 bg-soc-surface/20 flex flex-col">
@@ -1861,7 +1861,7 @@ export default function App() {
         </div>
 
         {/* Right column: Live Event Feed */}
-        <div className="lg:w-[42%] flex flex-col overflow-hidden">
+        <div className="lg:w-[42%] flex flex-col">
 
           {/* Feed header */}
           <div className="shrink-0 px-5 py-3 border-b border-soc-border/50 bg-soc-surface/30 backdrop-blur-sm flex items-center justify-between">
@@ -1891,11 +1891,8 @@ export default function App() {
             </div>
           </div>
 
-          {/* Scrollable feed */}
-          <div
-            ref={feedRef}
-            className="flex-1 overflow-y-auto p-4 flex flex-col gap-3"
-          >
+          {/* Natural flowing feed instead of constrained internal scroll */}
+          <div className="flex-1 p-4 flex flex-col gap-3">
             {events.length === 0 ? (
               /* Empty state */
               <div className="flex-1 flex flex-col items-center justify-center py-16 text-center">
