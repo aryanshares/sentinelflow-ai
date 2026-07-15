@@ -241,7 +241,7 @@ app = FastAPI(
 #   CORS_ALLOW_ALL=true
 # ---------------------------------------------------------------------------
 
-_CORS_ALLOW_ALL: bool = os.getenv("CORS_ALLOW_ALL", "false").lower() == "true"
+_CORS_ALLOW_ALL: bool = os.getenv("CORS_ALLOW_ALL", "true").lower() == "true"
 
 if _CORS_ALLOW_ALL:
     # Wildcard — allow every origin (use only during development / preview)
