@@ -1708,10 +1708,10 @@ export default function App() {
       <div className="flex-1 min-h-0 flex flex-col lg:flex-row gap-0 overflow-hidden max-w-[1920px] w-full mx-auto">
 
         {/* Left column: Chart + Vector Distribution */}
-        <div className="lg:w-[58%] flex flex-col gap-0 border-r border-soc-border/50 overflow-hidden">
+        <div className="lg:w-[58%] flex flex-col gap-0 border-r border-soc-border/50 overflow-y-auto">
 
           {/* ── Visual Dashboards ───────────────────────────────────────── */}
-          <div className="relative flex-1 min-h-0 p-5 bg-soc-surface/20 flex flex-col">
+          <div className="relative shrink-0 p-5 bg-soc-surface/20 flex flex-col">
             {/* Decorative corner accents */}
             <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-indigo-500/30 opacity-50 pointer-events-none" />
             <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-indigo-500/30 opacity-50 pointer-events-none" />
@@ -1725,7 +1725,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="flex-1 flex flex-col md:flex-row gap-6 min-h-0">
+            <div className="flex flex-col md:flex-row gap-6">
               
               {/* Threat Percentage Pie Chart */}
               <div className="flex-1 h-[250px] flex flex-col items-center justify-center relative bg-soc-card border border-soc-border/50 rounded-xl p-4">
